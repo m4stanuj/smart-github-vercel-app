@@ -26,6 +26,7 @@ body {
     align-items: center;
     overflow-x: hidden;
     position: relative;
+    padding: 2rem 0;
 }
 
 .background-glow {
@@ -54,8 +55,8 @@ body {
 
 .container {
     width: 100%;
-    max-width: 850px;
-    padding: 2rem;
+    max-width: 900px;
+    padding: 1rem 2rem;
     z-index: 1;
 }
 
@@ -95,14 +96,21 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.badge {
-    background: rgba(63, 185, 80, 0.15);
-    color: var(--accent-green);
-    border: 1px solid rgba(63, 185, 80, 0.3);
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
+.nav-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-blue);
 }
 
 .main-card {
@@ -186,9 +194,49 @@ body {
     color: var(--accent-green);
 }
 
-.status-indicator.pending {
-    background: rgba(210, 153, 34, 0.2);
-    color: #d29922;
+.content-depth-section, .blog-preview-section {
+    margin-bottom: 2.5rem;
+}
+
+.content-depth-section h2, .blog-preview-section h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.project-grid, .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.project-card, .blog-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 1.25rem;
+}
+
+.project-card h3, .blog-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--accent-blue);
+}
+
+.project-card p, .blog-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.blog-card .date {
+    font-size: 0.75rem;
+    color: var(--accent-purple);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.3rem;
 }
 
 .actions-panel {
