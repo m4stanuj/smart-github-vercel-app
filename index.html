@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub & Vercel Smart Integration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="brand">
+                <div class="logo-group">
+                    <svg class="logo github-logo" viewBox="0 0 24 24" width="32" height="32"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span class="connect-icon">⚡</span>
+                    <svg class="logo vercel-logo" viewBox="0 0 76 65" width="30" height="30"><path fill="currentColor" d="M37.5274 0L75.0548 65H0L37.5274 0Z"/></svg>
+                </div>
+                <h1>Smart Connect</h1>
+            </div>
+            <div class="badge">Continuous Deployment Active</div>
+        </header>
+
+        <main class="main-card">
+            <div class="hero-section">
+                <h2>GitHub & Vercel Automated Workflow</h2>
+                <p>Push code to GitHub and Vercel automatically builds and deploys your application in real-time.</p>
+            </div>
+
+            <div class="workflow-steps">
+                <div class="step-card active" id="step-1">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Local Git Repository</h3>
+                        <p>Tracked and ready for remote sync</p>
+                        <span class="status-indicator success">Ready</span>
+                    </div>
+                </div>
+
+                <div class="step-card" id="step-2">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>GitHub Repository</h3>
+                        <p>Continuous Integration (CI) Trigger</p>
+                        <span class="status-indicator pending">Connecting...</span>
+                    </div>
+                </div>
+
+                <div class="step-card" id="step-3">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Vercel Deployment</h3>
+                        <p>Global Edge Network Hosting</p>
+                        <span class="status-indicator pending">Awaiting Push</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions-panel">
+                <button class="btn btn-primary" id="btn-deploy" onclick="triggerDeployAnimation()">
+                    <span>🚀 Push & Deploy Live</span>
+                </button>
+                <a href="https://vercel.com/new" target="_blank" class="btn btn-secondary">
+                    <span>⚡ Open Vercel Integration</span>
+                </a>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Built with ❤️ for Seamless Developer Experience</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
