@@ -1,25 +1,28 @@
-function triggerDeployAnimation() {
-    const step2 = document.getElementById('step-2');
-    const step3 = document.getElementById('step-3');
-    const btn = document.getElementById('btn-deploy');
+const simulationButton = document.getElementById('btn-deploy');
+const simulationResult = document.getElementById('simulation-result');
+const stepStatuses = document.querySelectorAll('#features .status-indicator');
 
-    btn.innerHTML = '⏳ Syncing Git & Vercel...';
-    btn.disabled = true;
+simulationButton.addEventListener('click', async () => {
+    if (simulationButton.getAttribute('aria-disabled') === 'true') {
+        return;
+    }
 
-    setTimeout(() => {
-        const ind2 = step2.querySelector('.status-indicator');
-        ind2.textContent = 'Synced';
-        ind2.className = 'status-indicator success';
-        step2.classList.add('active');
-    }, 1200);
+    simulationButton.setAttribute('aria-disabled', 'true');
+    simulationResult.textContent = 'Deployment simulation running.';
+    for (const status of stepStatuses) {
+        status.textContent = 'Waiting';
+        status.classList.remove('success');
+    }
 
-    setTimeout(() => {
-        const ind3 = step3.querySelector('.status-indicator');
-        ind3.textContent = 'Live Deployed';
-        ind3.className = 'status-indicator success';
-        step3.classList.add('active');
+    for (const status of stepStatuses) {
+        status.textContent = 'Simulating';
+        await new Promise((resolve) => setTimeout(resolve, 800));
+        status.textContent = 'Simulation complete';
+        status.classList.add('success');
+    }
 
-        btn.innerHTML = '✅ Deployed Successfully!';
-        btn.style.background = 'linear-gradient(135deg, #1f6beb, #388bfd)';
-    }, 2500);
-}
+    simulationResult.textContent = 'Simulation complete. All three demo steps finished.';
+    simulationButton.removeAttribute('aria-disabled');
+});
+
+simulationButton.disabled = false;

@@ -62,7 +62,7 @@
                 <h1>M4ST AI Systems</h1>
             </div>
             <nav class="nav-links">
-                <a href="#features">Features</a>
+                <a href="#features">Simulation</a>
                 <a href="#projects">Projects</a>
                 <a href="#blog">Blog & Insights</a>
             </nav>
@@ -71,36 +71,51 @@
         <main class="main-card">
             <section class="hero-section">
                 <h2>Autonomous Multi-Agent Operator Systems</h2>
-                <p>Local-first, zero-cost AI operator platforms engineered for maximum privacy, custom tool integration, and seamless CI/CD execution.</p>
+                <p>Local-first, zero-cost AI operator platforms engineered for privacy and custom tool integration.</p>
             </section>
 
-            <section class="workflow-steps" id="features">
-                <article class="step-card active" id="step-1">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Local Git & Codebase Integration</h3>
-                        <p>Tracked and ready for seamless remote synchronization across environments.</p>
-                        <span class="status-indicator success">SEO Optimized</span>
-                    </div>
-                </article>
+            <section class="content-depth-section" id="features" aria-labelledby="simulation-heading">
+                <h2 id="simulation-heading">GitHub-to-Vercel Deployment Simulation</h2>
+                <p class="simulation-copy" id="simulation-description">Walk through a sample deployment. The demo runs in this browser and updates only the status shown on this page.</p>
+                <div class="workflow-steps">
+                    <article class="step-card">
+                        <div class="step-number" aria-hidden="true">1</div>
+                        <div class="step-content">
+                            <h3>Prepare Git Changes</h3>
+                            <p>Stage a sample set of changes for the pipeline.</p>
+                            <span class="status-indicator">Waiting</span>
+                        </div>
+                    </article>
 
-                <article class="step-card active" id="step-2">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>GitHub CI/CD Automation</h3>
-                        <p>Continuous Integration triggers automated building and release checks.</p>
-                        <span class="status-indicator success">GitHub Connected</span>
-                    </div>
-                </article>
+                    <article class="step-card">
+                        <div class="step-number" aria-hidden="true">2</div>
+                        <div class="step-content">
+                            <h3>Run GitHub Checks</h3>
+                            <p>Simulate build and release checks.</p>
+                            <span class="status-indicator">Waiting</span>
+                        </div>
+                    </article>
 
-                <article class="step-card active" id="step-3">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Vercel Global Edge Network</h3>
-                        <p>Sub-second static delivery with automatic SSL and CDN caching worldwide.</p>
-                        <span class="status-indicator success">Live & Indexed</span>
-                    </div>
-                </article>
+                    <article class="step-card">
+                        <div class="step-number" aria-hidden="true">3</div>
+                        <div class="step-content">
+                            <h3>Release to Vercel</h3>
+                            <p>Simulate publishing the checked build.</p>
+                            <span class="status-indicator">Waiting</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="actions-panel">
+                    <button class="btn btn-primary" id="btn-deploy" type="button" aria-describedby="simulation-description" disabled>
+                        Run deployment simulation
+                    </button>
+                    <a href="https://github.com/m4stanuj/smart-github-vercel-app" target="_blank" rel="noopener" class="btn btn-secondary">
+                        View GitHub repo
+                    </a>
+                </div>
+                <p class="simulation-result" id="simulation-result" role="status"></p>
+                <noscript><p class="simulation-copy">Enable JavaScript to run the deployment simulation.</p></noscript>
             </section>
 
             <section class="content-depth-section" id="projects">
@@ -111,8 +126,8 @@
                         <p>High-performance zero-cost multi-agent coordination engine built with Model Context Protocol (MCP).</p>
                     </article>
                     <article class="project-card">
-                        <h3>Autonomous CI/CD Pipeline</h3>
-                        <p>Instantaneous GitHub to Vercel deployment sync with automated SEO verification.</p>
+                        <h3>CI/CD Workflow Demo</h3>
+                        <p>A browser simulation of Git preparation, build checks, and a sample release.</p>
                     </article>
                 </div>
             </section>
@@ -127,15 +142,6 @@
                     </article>
                 </div>
             </section>
-
-            <div class="actions-panel">
-                <button class="btn btn-primary" id="btn-deploy" onclick="triggerDeployAnimation()">
-                    <span>🚀 Push & Sync Live Site</span>
-                </button>
-                <a href="https://github.com/m4stanuj/smart-github-vercel-app" target="_blank" class="btn btn-secondary">
-                    <span>📦 View GitHub Repo</span>
-                </a>
-            </div>
         </main>
 
         <footer class="footer">

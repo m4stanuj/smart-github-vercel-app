@@ -137,9 +137,9 @@ body {
 
 .workflow-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
     gap: 1.25rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .step-card {
@@ -187,6 +187,8 @@ body {
     font-weight: 700;
     padding: 0.2rem 0.6rem;
     border-radius: 12px;
+    background: rgba(88, 166, 255, 0.12);
+    color: var(--accent-blue);
 }
 
 .status-indicator.success {
@@ -245,6 +247,20 @@ body {
     flex-wrap: wrap;
 }
 
+.simulation-copy, .simulation-result {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.simulation-copy {
+    margin-bottom: 1rem;
+}
+
+.simulation-result {
+    margin-top: 0.75rem;
+}
+
 .btn {
     padding: 0.85rem 1.5rem;
     border-radius: 14px;
@@ -268,6 +284,18 @@ body {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(46, 160, 67, 0.6);
+}
+
+.btn-primary:disabled, .btn-primary[aria-disabled="true"] {
+    background: #374151;
+    box-shadow: none;
+    cursor: default;
+    transform: none;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 3px;
 }
 
 .btn-secondary {
